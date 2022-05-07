@@ -37,7 +37,7 @@
     text-decoration: none; 
     font-weight: bold;
     transition: color .1s;
-  }
+  } 
   
   a:hover {
     color: var(--secondary-color);
