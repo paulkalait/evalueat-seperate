@@ -1,0 +1,47 @@
+<article>
+  <a href="/dashboard"> &larr; Back to dashboard</a>
+  <h2>
+    Edit Post
+  </h2>
+  <form class="edit-post-form" method="POST" action="/upload" enctype="multipart/form-data">
+  <input type="hidden" name="_method" value="put" />
+    <div>
+      <input name="post-title" type="text" value="{{post.title}}" />
+
+      {{!-- insert photo --}}
+       <label id="add-photo" style="padding-bottom: 2%;">
+       <input type="file" accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"/>
+    Add Photo   <i class="fa fa-upload" style="font-size:18px;"></i>
+    </label>
+    <div style="width: 100px; height: 100px; display: none; ">
+      <img id="output" style="width:100%; object-fit: cover" src="/images/{{post.image_name}}"/>
+    </div>
+    {{!-- photo ends --}}
+      <textarea name="post-text" id="edit-postext">({{post.post_text}})</textarea>
+    </div>
+    <div>
+      
+      |
+      <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+    </div>
+    {{!-- <button type="submit" class="btn" id="save-post-btn">Save post</button> --}}
+        <input type="submit" id="save-post-btn" value="Update" class="btn">
+    <button type="button" class="btn" id="delete-post-btn">Delete post</button>
+  </form>
+</article>
+
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button class="btn" id="add-comment" type="submit">add comment</button>
+  </div>
+</form>
+
+{{> comments post.comments}}
+
+{{!-- <script src="/javascript/edit-post.js"></script> --}}
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>

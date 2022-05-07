@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>evalueat </title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/2bd04f5e1d.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>
+        <a href="/"><img src="/images/evaluEAT.png" width="40%"></a>
+      </h1>
+      <nav>
+        {{#if loggedIn}}
+        <a href="/dashboard">add post <i class="fa-solid fa-plus"></i></span></a>
+        <button id="logout" class="btn-no-style">logout  <i class="fa fa-sign-out" style="font-size:14px"></i></button>
+        {{else}}
+        | <a href="/login">login <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+          
+        {{/if}}
+      </nav>
+    </header>
+    <main>
+      {{{ body }}}
+    </main>
+    <footer class = "footer-container">
+        <div class = "thanks-message">
+          <p> Thanks for visiting! <i class="fa-solid fa-burger"></i></p>
+           </div>
+    </footer>
+ 
+  
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
