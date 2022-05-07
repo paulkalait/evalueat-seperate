@@ -22,8 +22,14 @@
   
   }
   header nav a{
+    font-size: 2.2vh;
+  }
+
+  header nav a:hover{
+    transition: .4s;
     font-size: 2.5vh;
   }
+ 
   div a {
     color: black;
   }
@@ -63,7 +69,11 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family:'Fjalla One', sans-serif;
-    font-size: 2.00vh;
+    font-size: 2.2vh;
+  }
+  #logout:hover{
+    transition: .4s;
+    font-size: 2.5vh;
   }
  
   .btn:hover {
@@ -272,8 +282,10 @@ input[type="file"] {
     margin-bottom: 1%;
   }
   
-  .comment:nth-child(odd) {
-    background-color: #ccc;
+  .comment{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1%;
+    border-radius: 5%;
   }
   
   .comment .meta {
@@ -364,13 +376,13 @@ input[type="file"] {
 }
 .image_size{
   width: 100%;
-  height: 850px;
+  height: 300px;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 #output{
   width:100%;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
  object-fit: cover;
 }
 #image-text{
@@ -391,6 +403,9 @@ input[type="file"] {
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+    #output{
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
     }
     #delete-post-btn{
       width: 100%;
@@ -452,15 +467,19 @@ input[type="file"] {
      width: 100%;
    }
   }
-  @media screen and (min-width: 1980px) {
+  @media screen and (min-width: 1580px) {
     .image_size{
       width: 100%;
-      height: 900px;
+      height: 420px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
     #output{
       width: 80%;
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
+    }
+    .wrapper{
+      width:40%
     }
   }
