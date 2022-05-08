@@ -389,9 +389,17 @@ input[type="file"] {
   padding-top: 2%;
 }
 #add-comment {
+  padding-top: 1.00%;
+  padding-bottom: 1.00%;
   width: 35%;
 }
+#save-post-btn{
+  padding-top: 1.00%;
+  padding-bottom: 1.00%;
+}
 #delete-post-btn {
+  padding-top: 1.00%;
+  padding-bottom: 1.00%;
   margin-top: 1%;
   width: 35%;
 }

@@ -4,6 +4,7 @@ const { Post, User, Comment} = require('../models');
 const fs = require('fs')
 const multer = require("multer");
 const path = require("path")
+const c = require('ansi-colors')
 const { findAll } = require('../models/Post');
 
 const upload = multer({
@@ -18,12 +19,7 @@ router.post(
     const tempPath = req.file.path;
     // console.log(tempPath)
     const targetPath = path.join(__dirname, `../public/images/${req.file.originalname}`)
-    // console.log(req.file.originalname)
-    if(path.extname(req.file.originalname).toLowerCase() === ".png" || ".jpeg" || ".gif" ){
-      // fs.rename(tempPath, targetPath, err => {
-      //   console.log(targetPath)
-      //   if(err) return handleError(err, res)
-      // })
+    console.log(c.red.bold(req.file.originalname))
       console.log(req.body)
       console.log(req.file.originalname)
       
@@ -48,16 +44,7 @@ router.post(
           console.log(err);
           res.status(500).json(err);
         })
-    }else{
-      fs.unlink(tempPath, err=> {
-        if(err) throw(err)
-
-        res
-        .status(404)
-        .contentType("text/plain"
-        .end("only .png files are allowed!"))
-      })
-    }
+    
   }
 )
 
@@ -69,12 +56,6 @@ router.put(
     const tempPath = req.file.path;
     // console.log(tempPath)
     const targetPath = path.join(__dirname, `../public/images/${req.file.originalname}`)
-    // console.log(req.file.originalname)
-    if(path.extname(req.file.originalname).toLowerCase() === ".png" || ".jpeg" || ".gif" ){
-      // fs.rename(tempPath, targetPath, err => {
-      //   console.log(targetPath)
-      //   if(err) return handleError(err, res)
-      // })
       console.log(req.body)
       console.log(req.file.originalname)
       
@@ -98,18 +79,9 @@ router.put(
         .catch(err => {
           console.log(err);
           res.status(500).json(err);
+    
         })
-    }else{
-      fs.unlink(tempPath, err=> {
-        if(err) throw(err)
-
-        res
-        .status(404)
-        .contentType("text/plain"
-        .end("only .png files are allowed!"))
-      })
-    }
-  }
+      }
 )
 
 // router.get("/image/:image", (req,res) => {
