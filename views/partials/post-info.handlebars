@@ -1,6 +1,7 @@
 <article class="post">
   <div class="title">
-    <a href="/post/{{id}}" style="font-size: 3.5vh;">{{title}}</p>
+    <a href="/post/{{id}}" style="font-size: 3.5vh;">{{title}}</a>
+    <p id="created-at">{{user.username}} on {{format_date created_at}}</p>
     <div class="image_size" >
  <img id="output" style="width: 100%; height: 100%;  object-fit: cover;" src="/images/{{image_name}}"/>
     </div>

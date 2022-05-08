@@ -395,6 +395,17 @@ input[type="file"] {
   margin-top: 1%;
   width: 35%;
 }
+.image_size{
+  width: 100%;
+  height: 520px;
+}
+#created-at{
+  padding-top: 0%;
+  padding-bottom: 1%;
+  margin: 0;
+  font-family:'Fjalla One', sans-serif;
+  font-size: 1.5vh;
+}
   /* mobile responsiveness */
   @media screen and (max-width: 850px) {
     .image_size{
