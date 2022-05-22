@@ -1,7 +1,7 @@
 # evalueat-seperate
 
 
-## Badges
+## Badges 
 ![Jest](https://img.shields.io/badge/Jest-C21325?style=plastic&logo=jest&logoColor=white)
 ![NPM](https://img.shields.io/badge/npm-CB3837?style=plastic&logo=npm&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node-6DA55F?style=plastic&logo=node.js&logoColor=white)
